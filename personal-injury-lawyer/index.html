@@ -295,7 +295,11 @@
 
   function selectAnswer(step, value) {
     answers["q" + step] = value;
-    if (step < 3) {
+    if (step === 1 && value === "no") {
+      answers.q2 = "";
+      answers.q3 = "";
+      showResult();
+    } else if (step < 3) {
       showStep(step + 1);
     } else {
       showResult();
