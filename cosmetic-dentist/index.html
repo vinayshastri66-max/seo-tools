@@ -226,7 +226,7 @@
       <button class="option-btn" onclick="selectAnswer(3, 'none')">No insurance</button>
       <button class="option-btn" onclick="selectAnswer(3, 'unsure')">Not sure</button>
     </div>
-    <button class="back-btn" onclick="goBack(2)">← Back</button>
+    <button class="back-btn" onclick="goBackFromStep3()">← Back</button>
   </div>
 
   <!-- Result panel -->
@@ -290,10 +290,24 @@
 
   function selectAnswer(step, value) {
     answers["q" + step] = value;
-    if (step < 3) {
+    if (step === 1 && (value === "whitening" || value === "aligners")) {
+      answers.q2 = "";
+      showStep(3);
+    } else if (step < 3) {
       showStep(step + 1);
     } else {
       showResult();
+    }
+  }
+
+  // Step 3 back routes to step 1 if Q2 was skipped (whitening/aligners), otherwise step 2
+  function goBackFromStep3() {
+    answers.q3 = "";
+    if (answers.q1 === "whitening" || answers.q1 === "aligners") {
+      answers.q2 = "";
+      showStep(1);
+    } else {
+      showStep(2);
     }
   }
 
