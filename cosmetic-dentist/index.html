@@ -1,0 +1,334 @@
+<!-- To embed this tool on your website, paste this snippet where you want it to appear:
+<iframe src="https://vinayshastri66-max.github.io/seo-tools/cosmetic-dentist/"
+        width="100%" height="560" frameborder="0" style="border:none;"></iframe>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Much Will My Cosmetic Dental Treatment Cost? | Free Consultation</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    #quiz-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      max-width: 560px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #quiz-header {
+      background: #1a2744;
+      color: #fff;
+      padding: 28px 28px 24px;
+    }
+
+    #quiz-header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    #quiz-header p {
+      font-size: 0.9rem;
+      opacity: 0.80;
+    }
+
+    .step, #result {
+      padding: 28px;
+    }
+
+    .hidden { display: none !important; }
+
+    .progress {
+      font-size: 0.78rem;
+      color: #888;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .question {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1a2744;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option-btn {
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 13px 16px;
+      font-size: 0.95rem;
+      color: #333;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .option-btn:hover {
+      border-color: var(--color-primary);
+      background: #f0f5ff;
+    }
+
+    .result-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .result-heading {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a2744;
+      margin-bottom: 12px;
+    }
+
+    .result-body {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .result-body strong {
+      color: #1a2744;
+    }
+
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin-bottom: 16px;
+      transition: opacity 0.15s;
+    }
+
+    .cta-btn:hover { opacity: 0.88; }
+
+    .back-btn {
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      color: #555;
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 8px 16px;
+      margin-top: 18px;
+      display: inline-block;
+      transition: background 0.15s;
+    }
+
+    .back-btn:hover { background: #e4e4e4; }
+
+    .restart-btn {
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      color: #555;
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 10px 20px;
+      margin-top: 14px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      transition: background 0.15s;
+    }
+
+    .restart-btn:hover { background: #e4e4e4; }
+
+    .disclaimer {
+      font-size: 0.75rem;
+      color: #999;
+      line-height: 1.5;
+      border-top: 1px solid #eee;
+      padding-top: 14px;
+    }
+
+    #attribution {
+      text-align: center;
+      font-size: 0.72rem;
+      color: #bbb;
+      padding: 10px 28px 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="quiz-container">
+  <div id="quiz-header">
+    <h1>How Much Will My Cosmetic Dental Treatment Cost?</h1>
+    <p>Get an estimated price range in 3 questions.</p>
+  </div>
+
+  <!-- Step 1 -->
+  <div id="step-1" class="step">
+    <div class="progress">Question 1 of 3</div>
+    <div class="question">What's your main cosmetic goal?</div>
+    <div class="options">
+      <button class="option-btn" onclick="selectAnswer(1, 'whitening')">Whiter teeth</button>
+      <button class="option-btn" onclick="selectAnswer(1, 'restore')">Fix chipped, worn, or discolored teeth</button>
+      <button class="option-btn" onclick="selectAnswer(1, 'implants')">Replace one or more missing teeth</button>
+      <button class="option-btn" onclick="selectAnswer(1, 'aligners')">Straighter teeth or a full smile makeover</button>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div id="step-2" class="step hidden">
+    <div class="progress">Question 2 of 3</div>
+    <div class="question">How many teeth are you looking to address?</div>
+    <div class="options">
+      <button class="option-btn" onclick="selectAnswer(2, 'few')">Just 1–2 teeth</button>
+      <button class="option-btn" onclick="selectAnswer(2, 'several')">Several teeth in my smile</button>
+      <button class="option-btn" onclick="selectAnswer(2, 'all')">My entire smile</button>
+      <button class="option-btn" onclick="selectAnswer(2, 'unsure')">I'm not sure yet</button>
+    </div>
+    <button class="back-btn" onclick="goBack(1)">← Back</button>
+  </div>
+
+  <!-- Step 3 -->
+  <div id="step-3" class="step hidden">
+    <div class="progress">Question 3 of 3</div>
+    <div class="question">Do you have dental insurance?</div>
+    <div class="options">
+      <button class="option-btn" onclick="selectAnswer(3, 'covered')">Yes, with some cosmetic coverage</button>
+      <button class="option-btn" onclick="selectAnswer(3, 'basic')">Yes, but cosmetics aren't typically covered</button>
+      <button class="option-btn" onclick="selectAnswer(3, 'none')">No insurance</button>
+      <button class="option-btn" onclick="selectAnswer(3, 'unsure')">Not sure</button>
+    </div>
+    <button class="back-btn" onclick="goBack(2)">← Back</button>
+  </div>
+
+  <!-- Result panel -->
+  <div id="result" class="hidden">
+    <div class="result-icon" id="result-icon"></div>
+    <div class="result-heading" id="result-heading"></div>
+    <div class="result-body" id="result-body"></div>
+    <a id="cta-btn" class="cta-btn" href="#">Book a Free Consultation →</a>
+    <div class="disclaimer">Cost ranges shown are estimates based on US national averages and do not represent a formal quote. Actual costs vary by location, provider, and individual treatment plan. Consult a licensed dental professional for exact pricing.</div>
+    <button class="restart-btn" onclick="resetQuiz()">Start over</button>
+  </div>
+
+  <div id="attribution">Built by Vinay A. S — vinayshastri66@gmail.com</div>
+</div>
+
+<script>
+  // ── Client config — update these before handing off to a client ──
+  const CONFIG = {
+    firmPhone:    "tel:+10000000000",
+    firmName:     "Our Dental Practice",
+    primaryColor: "#2563eb",
+  };
+
+  document.documentElement.style.setProperty("--color-primary", CONFIG.primaryColor);
+
+  let answers = { q1: "", q2: "", q3: "" };
+
+  const RESULTS = {
+    whitening: {
+      icon: "🦷",
+      heading: "Your estimated investment: $300–$800",
+      body: `Professional in-office whitening typically runs $300–$800 depending on the system and number of sessions. Results last 1–3 years with at-home maintenance. Cosmetic procedures are rarely covered by insurance, but this is one of the most accessible treatments available.<br><br><strong>An exact quote takes about 15 minutes — and most consultations are free.</strong>`,
+    },
+    restore: {
+      icon: "✨",
+      heading: "Your estimated investment: $300–$2,500 per tooth",
+      body: `Composite bonding runs $300–$800 per tooth and is ideal for minor corrections. Porcelain veneers run $1,000–$2,500 per tooth and last 10–20 years. The right choice depends on the extent of the correction and your goals.<br><br><strong>A free consultation will show you both options side by side.</strong>`,
+    },
+    implants: {
+      icon: "🔩",
+      heading: "Your estimated investment: $3,000–$5,000 per tooth",
+      body: `A single dental implant — including the post, abutment, and crown — typically runs $3,000–$5,000. Multiple implants scale from there; full-arch implant solutions range from $20,000–$45,000. Implants are the most durable tooth replacement available.<br><br><strong>A free consultation with imaging will give you an exact number.</strong>`,
+    },
+    aligners: {
+      icon: "📐",
+      heading: "Your estimated investment: $3,000–$8,000",
+      body: `Clear aligner treatment — including Invisalign and similar systems — typically runs $3,000–$8,000 depending on case complexity and treatment length. Most practices offer financing with low or no down payment.<br><br><strong>A free consultation will tell you how long treatment takes and exactly what it costs.</strong>`,
+    },
+  };
+
+  function showStep(n) {
+    for (let i = 1; i <= 3; i++) {
+      const el = document.getElementById("step-" + i);
+      el.classList.remove("visible");
+      el.classList.add("hidden");
+    }
+    const target = document.getElementById("step-" + n);
+    target.classList.remove("hidden");
+    target.classList.add("visible");
+  }
+
+  function selectAnswer(step, value) {
+    answers["q" + step] = value;
+    if (step < 3) {
+      showStep(step + 1);
+    } else {
+      showResult();
+    }
+  }
+
+  function goBack(toStep) {
+    answers["q" + (toStep + 1)] = "";
+    showStep(toStep);
+  }
+
+  function resetQuiz() {
+    answers = { q1: "", q2: "", q3: "" };
+    document.getElementById("result").classList.remove("visible");
+    document.getElementById("result").classList.add("hidden");
+    showStep(1);
+  }
+
+  // ── Outcome logic — Q1 drives the result; Q2 and Q3 are engagement only ──
+  function showResult() {
+    const key = answers.q1;
+
+    const r = RESULTS[key];
+    document.getElementById("result-icon").textContent    = r.icon;
+    document.getElementById("result-heading").textContent = r.heading;
+    document.getElementById("result-body").innerHTML      = r.body;
+    document.getElementById("cta-btn").href               = CONFIG.firmPhone;
+
+    for (let i = 1; i <= 3; i++) {
+      const el = document.getElementById("step-" + i);
+      el.classList.remove("visible");
+      el.classList.add("hidden");
+    }
+    const resultEl = document.getElementById("result");
+    resultEl.classList.remove("hidden");
+    resultEl.classList.add("visible");
+  }
+</script>
+
+</body>
+</html>
