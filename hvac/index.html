@@ -1,0 +1,337 @@
+<!-- To embed this tool on your website, paste this snippet where you want it to appear:
+<iframe src="https://vinayshastri66-max.github.io/seo-tools/hvac/"
+        width="100%" height="520" frameborder="0" style="border:none;"></iframe>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Should I Repair or Replace My HVAC? | Free In-Home Assessment</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    #quiz-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      max-width: 560px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #quiz-header {
+      background: #1a2744;
+      color: #fff;
+      padding: 28px 28px 24px;
+    }
+
+    #quiz-header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    #quiz-header p {
+      font-size: 0.9rem;
+      opacity: 0.80;
+    }
+
+    #calculator, #result {
+      padding: 28px;
+    }
+
+    .hidden { display: none !important; }
+
+    .field-group {
+      margin-bottom: 20px;
+    }
+
+    .field-group label {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1a2744;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .input-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .input-row input[type="number"] {
+      flex: 1;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 13px 14px;
+      font-size: 1rem;
+      color: #333;
+      outline: none;
+      transition: border-color 0.15s;
+      -moz-appearance: textfield;
+    }
+
+    .input-row input[type="number"]::-webkit-inner-spin-button,
+    .input-row input[type="number"]::-webkit-outer-spin-button {
+      opacity: 1;
+    }
+
+    .input-row input[type="number"]:focus {
+      border-color: var(--color-primary);
+    }
+
+    .unit {
+      font-size: 0.95rem;
+      color: #666;
+      white-space: nowrap;
+    }
+
+    .rule-note {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .input-error {
+      font-size: 0.85rem;
+      color: #c0392b;
+      margin-top: 14px;
+    }
+
+    .calc-btn {
+      display: block;
+      width: 100%;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: opacity 0.15s;
+    }
+
+    .calc-btn:hover { opacity: 0.88; }
+
+    .result-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .result-heading {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a2744;
+      margin-bottom: 12px;
+    }
+
+    .result-body {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .result-body strong {
+      color: #1a2744;
+    }
+
+    .score-callout {
+      background: #f0f5ff;
+      border-left: 3px solid var(--color-primary);
+      border-radius: 4px;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      color: #1a2744;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin-bottom: 16px;
+      transition: opacity 0.15s;
+    }
+
+    .cta-btn:hover { opacity: 0.88; }
+
+    .restart-btn {
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      color: #555;
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 10px 20px;
+      margin-top: 14px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      transition: background 0.15s;
+    }
+
+    .restart-btn:hover { background: #e4e4e4; }
+
+    .disclaimer {
+      font-size: 0.75rem;
+      color: #999;
+      line-height: 1.5;
+      border-top: 1px solid #eee;
+      padding-top: 14px;
+    }
+
+    #attribution {
+      text-align: center;
+      font-size: 0.72rem;
+      color: #bbb;
+      padding: 10px 28px 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="quiz-container">
+  <div id="quiz-header">
+    <h1>Should I Repair or Replace My HVAC?</h1>
+    <p>Enter two numbers to get a recommendation.</p>
+  </div>
+
+  <!-- Calculator screen -->
+  <div id="calculator">
+    <div class="field-group">
+      <label for="age-input">How old is your HVAC system?</label>
+      <div class="input-row">
+        <input type="number" id="age-input" min="1" max="60" placeholder="e.g. 12">
+        <span class="unit">years old</span>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label for="cost-input">What's the estimated repair cost?</label>
+      <div class="input-row">
+        <span class="unit">$</span>
+        <input type="number" id="cost-input" min="1" placeholder="e.g. 1500">
+      </div>
+      <div class="rule-note">Use the quote you received, or your best estimate.</div>
+    </div>
+
+    <div id="input-error" class="input-error hidden">Please enter both your system age and the repair cost.</div>
+
+    <button class="calc-btn" onclick="calculate()">Calculate →</button>
+  </div>
+
+  <!-- Result panel -->
+  <div id="result" class="hidden">
+    <div class="result-icon" id="result-icon"></div>
+    <div class="result-heading" id="result-heading"></div>
+    <div class="score-callout" id="score-callout"></div>
+    <div class="result-body" id="result-body"></div>
+    <a id="cta-btn" class="cta-btn" href="#">Get a Free In-Home Assessment →</a>
+    <div class="disclaimer">This calculator uses the Rule of 5000, a widely used industry heuristic. It is not a substitute for a professional assessment. Actual recommendations may vary based on system type, condition, and local energy costs.</div>
+    <button class="restart-btn" onclick="resetCalc()">Start over</button>
+  </div>
+
+  <div id="attribution">Built by Vinay A. S — vinayshastri66@gmail.com</div>
+</div>
+
+<script>
+  // ── Client config — update these before handing off to a client ──
+  const CONFIG = {
+    firmPhone:    "tel:+10000000000",
+    firmName:     "Our HVAC Company",
+    primaryColor: "#2563eb",
+  };
+
+  document.documentElement.style.setProperty("--color-primary", CONFIG.primaryColor);
+
+  const RESULTS = {
+    replace: {
+      icon: "🔄",
+      heading: "Based on your numbers, replacing your system is likely the smarter investment.",
+      body: `Your score puts you above $5,000 — the threshold where repair costs typically outweigh the value of keeping an aging system running. A new system also means lower energy bills, fewer breakdowns, and a manufacturer's warranty.<br><br><strong>A free in-home assessment will give you an exact replacement quote and financing options.</strong>`,
+    },
+    aging: {
+      icon: "⚠️",
+      heading: "Based on your numbers, repairing now makes sense — but plan ahead.",
+      body: `Your score is under $5,000, so the repair is reasonable today. But with a system this age, you're likely within a few years of replacement. Putting off the inevitable often means a breakdown at the worst time — mid-summer or mid-winter.<br><br><strong>A free assessment can tell you what to expect and help you budget ahead of time.</strong>`,
+    },
+    repair: {
+      icon: "✅",
+      heading: "Based on your numbers, repairing your system is the right call.",
+      body: `Your score is well under $5,000, and your system is still within a reasonable service life. A repair should give you several more years of reliable operation.<br><br><strong>A free in-home assessment can confirm the diagnosis and give you an exact repair quote.</strong>`,
+    },
+  };
+
+  function calculate() {
+    const ageVal  = document.getElementById("age-input").value.trim();
+    const costVal = document.getElementById("cost-input").value.trim();
+    const errEl   = document.getElementById("input-error");
+
+    if (!ageVal || !costVal || Number(ageVal) <= 0 || Number(costVal) <= 0) {
+      errEl.classList.remove("hidden");
+      return;
+    }
+    errEl.classList.add("hidden");
+
+    const age   = Math.round(Number(ageVal));
+    const cost  = Math.round(Number(costVal));
+    const score = age * cost;
+
+    let key;
+    if      (score > 5000)  key = "replace";
+    else if (age >= 15)     key = "aging";
+    else                    key = "repair";
+
+    const r = RESULTS[key];
+    document.getElementById("result-icon").textContent    = r.icon;
+    document.getElementById("result-heading").textContent = r.heading;
+    document.getElementById("result-body").innerHTML      = r.body;
+    document.getElementById("cta-btn").href               = CONFIG.firmPhone;
+    document.getElementById("score-callout").textContent  =
+      `Rule of 5000: ${age} yrs × $${cost.toLocaleString()} = $${score.toLocaleString()} — ${score > 5000 ? "above" : "below"} the $5,000 threshold`;
+
+    document.getElementById("calculator").classList.add("hidden");
+    const resultEl = document.getElementById("result");
+    resultEl.classList.remove("hidden");
+  }
+
+  function resetCalc() {
+    document.getElementById("age-input").value  = "";
+    document.getElementById("cost-input").value = "";
+    document.getElementById("input-error").classList.add("hidden");
+    document.getElementById("result").classList.add("hidden");
+    document.getElementById("calculator").classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>
